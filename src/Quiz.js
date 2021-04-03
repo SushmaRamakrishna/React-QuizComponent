@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-let quizData = require('./quiz_data.json');
+let quizData = require('./quiz_data.json')
 
 
 class Quiz extends React.Component {
@@ -10,14 +10,12 @@ class Quiz extends React.Component {
         this.state = {quiz_position: 1};
     }
     render(){
-        return <div className="QuizQuestion">
-            {
-               quizData.quiz_questions.map((questions) => {                  
-                      return( <div>{ questions.instruction_text }</div>  )              
-               })           
-            }
-             </div>;
+        return <div>
+            <div className="QuizQuestion">
+            {quizData.quiz_questions[0].instruction_text}
+             </div>
+            </div>
     }
 }
 
-export default Quiz;
+export default Quiz
