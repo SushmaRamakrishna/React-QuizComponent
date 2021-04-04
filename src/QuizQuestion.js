@@ -6,7 +6,7 @@ class QuizQuestion extends Component {
         super(props);
         this.state = {incorrectAnswer:false}
     }
-    handeClick(buttonText){
+    handleClick(buttonText){
         if(buttonText === this.props.quiz_question.answer){
             this.setState({incorrectAnswer:false})
             this.props.showNextQuestionHandler()
@@ -24,7 +24,7 @@ class QuizQuestion extends Component {
             <ul>               
             {this.props.quiz_question.answer_options.map((answer_option, index) => {
                     return <QuizQuestionButton key={index} button_text={answer_option}
-                    clickHandler={ this.handeClick.bind(this)} /> 
+                    clickHandler={this.handleClick.bind(this)} /> 
                    
                 })}
             
